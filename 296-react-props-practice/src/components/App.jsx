@@ -2,11 +2,15 @@ import React from "react";
 import Card from "./Card";
 import Heading from "./Heading";
 import contacts from "../contacts";
+import Avatar from "./Avatar";
 
 function App() {
   return (
     <div>
       <Heading />
+      
+      <Avatar img="https://photosdp.com/wp-content/uploads/2024/05/42_anime-dp.jpg"/>
+
       <Card 
         name={contacts[0].name}
         img={contacts[0].imgURL}
