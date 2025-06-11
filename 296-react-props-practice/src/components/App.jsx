@@ -4,14 +4,24 @@ import Heading from "./Heading";
 import contacts from "../contacts";
 import Avatar from "./Avatar";
 
+function createCard(contact) {
+  return <Card 
+  name={contact.name}
+  img={contact.imgURL}
+  phone={contact.phone}
+  email={contact.email}
+  />
+}
+
 function App() {
   return (
     <div>
       <Heading />
-      
       <Avatar img="https://photosdp.com/wp-content/uploads/2024/05/42_anime-dp.jpg"/>
 
-      <Card 
+      {contacts.map(createCard)}
+
+      {/* <Card 
         name={contacts[0].name}
         img={contacts[0].imgURL}
         phone={contacts[0].phone}
@@ -28,7 +38,7 @@ function App() {
         img={contacts[2].imgURL}
         phone={contacts[2].phone}
         email={contacts[2].email}
-      /> 
+      />  */}
     </div>
   );
 }
