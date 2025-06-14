@@ -4,8 +4,14 @@ import Entry from "./Entry";
 import emojipedia from "../emojipedia";
 import Footer from "./Footer";
 
-function createEmoji(emojipedia) {
+
+
+function App() {
   return (
+    <div>
+      <Heading />
+      <dl className="dictionary">
+      {emojipedia.map((emojipedia) =>  (
     <Entry 
       id={emojipedia.id}
       key={emojipedia.id}
@@ -13,15 +19,7 @@ function createEmoji(emojipedia) {
       name={emojipedia.name}
       meaning={emojipedia.meaning}
     />
-  );
-}
-
-function App() {
-  return (
-    <div>
-      <Heading />
-      <dl className="dictionary">
-      {emojipedia.map(createEmoji)}
+  ))}
       </dl>
 
       {/* <Entry
